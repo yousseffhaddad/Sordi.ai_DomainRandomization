@@ -1,0 +1,26 @@
+[
+    {
+        "Id": 1000,
+        "Name": "klt_box"
+    },
+    {
+        "Id": 1001,
+        "Name": "stillage"
+    },
+    {
+        "Id": 1002,
+        "Name": "fire_extinguisher"
+    },
+    {
+        "Id": 1003,
+        "Name": "pallet"
+    },
+    {
+        "Id": 1004,
+        "Name": "jack"
+    },
+    {
+        "Id": 1008,
+        "Name": "dolly"
+    }
+]
