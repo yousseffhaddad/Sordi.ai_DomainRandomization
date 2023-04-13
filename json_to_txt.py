@@ -3,10 +3,10 @@ import json
 import shutil
 
 def txt_writer(files_directory):
-    #path = files_directory + '/datasets/'
+
     json_path = files_directory + "/labels/json/"
     if 'json' in os.listdir(files_directory + '/labels/'):
-        output = files_directory + "/labels/yolo/"
+        output = files_directory + "/labels/json/"
         create_folder(output)
         # Get the labels
         labels_list = os.listdir(json_path)
@@ -44,4 +44,4 @@ def create_folder(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-txt_writer('/home/youssef/Desktop/Training_Dataset(15k)/DR1_Dataset')
+txt_writer('/home/youssef/Desktop/Training_Dataset(15k)/No-DR+Aug')

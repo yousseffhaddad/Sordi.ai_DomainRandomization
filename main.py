@@ -61,7 +61,7 @@ def check_percentage(files_directory,selected_items,assets):
     return min_key
 
 
-def transfer_data (source_directory,destination_directory,nb_of_images):
+'''def transfer_data (source_directory,destination_directory,nb_of_images):
 
     data = json.load(open(source_directory + '/objectclasses.json'))
     assets_needed = ["klt_box", "stillage", "fire_extinguisher", "pallet", "jack", "dolly"]
@@ -111,10 +111,10 @@ def transfer_data (source_directory,destination_directory,nb_of_images):
             i=i+1
 
     else :
-        print ("your nb of images that you provided exceed the capacity ")
+        print ("your nb of images that you provided exceed the capacity ")'''
 
 
-'''def transfer_data (source_directory,destination_directory,nb_of_images):
+def transfer_data (source_directory,destination_directory,nb_of_images):
 
     data = json.load(open(source_directory + '/objectclasses.json'))
     assets_needed = ["klt_box", "stillage", "fire_extinguisher", "pallet", "jack", "dolly"]
@@ -159,8 +159,7 @@ def transfer_data (source_directory,destination_directory,nb_of_images):
             i=i+1
 
     else :
-        print ("your nb of images that you provided exceed the capacity ")'''
-
+        print ("your nb of images that you provided exceed the capacity ")
 
 def delete (files_directory : str,nb):
   j=0
@@ -213,10 +212,10 @@ pp.adjust_object_class_name('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_P
 
 #pp.delete_json('/home/youssef/Desktop/Training_Dataset/No-DR')
 #pp.delete_images('/home/youssef/Desktop/Training_Dataset/No-DR')
-da.augment_data('/home/youssef/Desktop/Training_Dataset30k/DR2(30k)','/home/youssef/Desktop/Training_Dataset30k/DR2_Aug(30k)')
+#da.augment_data('/home/youssef/Desktop/Training_Dataset30k/DR2(30k)','/home/youssef/Desktop/Training_Dataset30k/DR2_Aug(30k)')
 #print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
 #print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
-#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC','/home/youssef/Desktop/Training_Dataset30k/NoDR',30000)
+transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization','/home/youssef/Desktop/Training_Dataset30k/DR1(30k)',len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization/images')))
 #check_percentage_histogram('/home/youssef/Desktop/Training_Dataset30k/NoDR_Aug',assets_needed)
 
 #delete('/home/youssef/Desktop/Training_Dataset30k/DR3',1)
