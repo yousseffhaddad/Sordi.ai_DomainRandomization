@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def checkAssets_bb(files_directory):
 
-    json_path = files_directory + "/labels/json/1.json"
+    json_path = files_directory + "/labels/json/2.json"
 
     with open(json_path,'r') as f:
         json_file = json.load(f)
@@ -23,8 +23,8 @@ def cleaning_bb(files_directory):
     json_path = files_directory + "/labels/json/"
     labels_list = os.listdir(json_path)
     print(labels_list)
-    assets_threshold = {"klt_box": 432, "stillage": 9500, "fire_extinguisher": 216, "pallet": 845, "jack": 1300,
-                     "dolly": 1110}
+    assets_threshold = {"klt_box": 5000, "stillage": 9800, "fire_extinguisher": 216, "pallet": 66000, "jack": 1300,
+                     "dolly": 5800}
     for label in labels_list:
         new_json = {}
         j = 0
@@ -81,6 +81,6 @@ def drawBox_allImages(files_directory):
         drawBox(bboxes,image)
 
 
-#cleaning_bb('datasets/data')
-#checkAssets_bb('datasets/data')
-drawBox_allImages('datasets/data')
+#cleaning_bb('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
+#checkAssets_bb('/home/youssef/Desktop/Evaluation_Dataset/Eval6')
+drawBox_allImages('/home/youssef/Desktop/Evaluation_Dataset/Eval5')

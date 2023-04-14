@@ -61,7 +61,7 @@ def check_percentage(files_directory,selected_items,assets):
     return min_key
 
 
-'''def transfer_data (source_directory,destination_directory,nb_of_images):
+def transfer_data (source_directory,destination_directory,nb_of_images):
 
     data = json.load(open(source_directory + '/objectclasses.json'))
     assets_needed = ["klt_box", "stillage", "fire_extinguisher", "pallet", "jack", "dolly"]
@@ -83,7 +83,7 @@ def check_percentage(files_directory,selected_items,assets):
             if ct>=nb_of_images:
                 break
             obj = json.load(open(source_directory + '/labels/json/' + item))
-            if ct%1000==0 :
+            if ct%10==0 :
                 asset=check_percentage(source_directory,selected_items,assets_needed)
                 print(asset)
             for j in range (len(obj)):
@@ -101,9 +101,9 @@ def check_percentage(files_directory,selected_items,assets):
         print(len(random_items))
         for label in random_items :
 
-            label_corresponding_image = label.split('.')[-2] + ".png"
+            label_corresponding_image = label.split('.')[-2] + ".jpg"
             image = cv2.imread(source_directory + '/images/' + label_corresponding_image)
-            cv2.imwrite(destination_directory + '/images/' + str(i) + '.png', image)
+            cv2.imwrite(destination_directory + '/images/' + str(i) + '.jpg', image)
             obj = json.load(open(source_directory + '/labels/json/' + label))
             open(destination_directory + '/labels/json/'+ str(i) +'.json', "w").write(
                 json.dumps(obj, sort_keys=False, indent=4, separators=(',', ': '))
@@ -111,10 +111,10 @@ def check_percentage(files_directory,selected_items,assets):
             i=i+1
 
     else :
-        print ("your nb of images that you provided exceed the capacity ")'''
+        print ("your nb of images that you provided exceed the capacity ")
 
 
-def transfer_data (source_directory,destination_directory,nb_of_images):
+'''def transfer_data (source_directory,destination_directory,nb_of_images):
 
     data = json.load(open(source_directory + '/objectclasses.json'))
     assets_needed = ["klt_box", "stillage", "fire_extinguisher", "pallet", "jack", "dolly"]
@@ -159,7 +159,7 @@ def transfer_data (source_directory,destination_directory,nb_of_images):
             i=i+1
 
     else :
-        print ("your nb of images that you provided exceed the capacity ")
+        print ("your nb of images that you provided exceed the capacity ")'''
 
 def delete (files_directory : str,nb):
   j=0
@@ -186,35 +186,35 @@ def drawBox(boxes,image):
 
 #Calling functions
 
-image = cv2.imread('/home/youssef/Desktop/Evaluation_Dataset/Eval5/images/105.jpg')
-image_label = json.load(open('/home/youssef/Desktop/Evaluation_Dataset/Eval5/labels/json/105.json'))
-origLeft = int(image_label[200]["Left"])
-origTop = int(image_label[200]["Top"])
-origRight = int(image_label[200]["Right"])
-origBottom = int(image_label[200]["Bottom"])
+'''image = cv2.imread('/home/youssef/Desktop/Evaluation_Dataset/Eval6/images/2.jpg')
+image_label = json.load(open('/home/youssef/Desktop/Evaluation_Dataset/Eval6/labels/json/2.json'))
+origLeft = int(image_label[1]["Left"])
+origTop = int(image_label[1]["Top"])
+origRight = int(image_label[1]["Right"])
+origBottom = int(image_label[1]["Bottom"])
 #print(origBottom,origTop,origRight,origLeft)
 
-drawBox([origLeft, origTop, origRight, origBottom],image)
+drawBox([origLeft, origTop, origRight, origBottom],image)'''
 
 assets_needed=["klt_box","stillage","fire_extinguisher","pallet","jack","dolly"]
 #print(check_percentage('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi_POC',assets_needed))
 #pp.remove_duplicates_using_hash('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Texture_Light')
 '''pp.change_subassets_names('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')
-pp.delete_uneeded_assets('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')
-pp.delete_empty_files('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')
-pp.adjust_object_class_name('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')
-#pp.renaming_Object_Class_Id('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')'''
+pp.delete_uneeded_assets('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')'''
+#pp.delete_empty_files('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
+#pp.adjust_object_class_name('/home/youssef/Desktop/Evaluation_Dataset/Eval5')
+#pp.renaming_Object_Class_Id('/home/youssef/Desktop/Evaluation_Dataset/Eval5')
 
 #pp.add_object_class_id('/home/youssef/Desktop/Training_Dataset30k/NoDR')
 
 
 #pp.delete_json('/home/youssef/Desktop/Training_Dataset/No-DR')
-#pp.delete_images('/home/youssef/Desktop/Training_Dataset/No-DR')
+#pp.delete_images('/home/youssef/Desktop/Evaluation_Dataset/Eval6.1')
 #da.augment_data('/home/youssef/Desktop/Training_Dataset30k/DR2(30k)','/home/youssef/Desktop/Training_Dataset30k/DR2_Aug(30k)')
-#print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
-#print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
-#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization','/home/youssef/Desktop/Training_Dataset30k/DR1(30k)',len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization/images')))
-#check_percentage_histogram('/home/youssef/Desktop/Training_Dataset30k/NoDR_Aug',assets_needed)
+#print(len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/regensburg_plant_720p/images')))
+#print(len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/regensburg_plant_720p/labels/json')))
+#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg','/home/youssef/Desktop/Evaluation_Dataset/Eval6',200)
+check_percentage_histogram('/home/youssef/Desktop/Evaluation_Dataset/Eval6',assets_needed)
 
 #delete('/home/youssef/Desktop/Training_Dataset30k/DR3',1)
 

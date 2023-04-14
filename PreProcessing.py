@@ -87,7 +87,7 @@ def delete_empty_files (files_directory : str):
   for filename in os.listdir(files_directory + '/labels/json/'):
     data = json.load(open(files_directory + '/labels/json/' + filename))
     if not data :
-      label_corresponding_image = filename.split('.')[-2] + ".png"
+      label_corresponding_image = filename.split('.')[-2] + ".jpg"
       os.remove(files_directory + '/labels/json/' + filename)
       if os.path.exists(files_directory + '/images/' + label_corresponding_image):
           os.remove(files_directory + '/images/' + label_corresponding_image)
