@@ -176,7 +176,7 @@ def delete (files_directory : str,nb):
     if j>=nb:
         break
 
-def drawBox(boxes, image):
+def drawBox(boxes,image):
 
     cv2.rectangle(image, (boxes[0], boxes[1]), (boxes[2], boxes[3]), (255, 0, 0),2)
     plt.figure(figsize=(10, 10))
@@ -186,17 +186,15 @@ def drawBox(boxes, image):
 
 #Calling functions
 
-
-
-
-image = cv2.imread('/home/youssef/Desktop/Evaluation_Dataset/Eval1/images/1.png')
-image_label = json.load(open('/home/youssef/Desktop/Evaluation_Dataset/Eval1/labels/json/1.json'))
-origLeft = int(image_label[1]["Left"])
-origTop = int(image_label[1]["Top"])
-origRight = int(image_label[1]["Right"])
-origBottom = int(image_label[1]["Bottom"])
+image = cv2.imread('/home/youssef/Desktop/Evaluation_Dataset/Eval5/images/105.jpg')
+image_label = json.load(open('/home/youssef/Desktop/Evaluation_Dataset/Eval5/labels/json/105.json'))
+origLeft = int(image_label[200]["Left"])
+origTop = int(image_label[200]["Top"])
+origRight = int(image_label[200]["Right"])
+origBottom = int(image_label[200]["Bottom"])
 #print(origBottom,origTop,origRight,origLeft)
-#drawBox([origLeft, origTop, origRight, origBottom],image)
+
+drawBox([origLeft, origTop, origRight, origBottom],image)
 
 assets_needed=["klt_box","stillage","fire_extinguisher","pallet","jack","dolly"]
 #print(check_percentage('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi_POC',assets_needed))
@@ -215,7 +213,7 @@ pp.adjust_object_class_name('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_P
 #da.augment_data('/home/youssef/Desktop/Training_Dataset30k/DR2(30k)','/home/youssef/Desktop/Training_Dataset30k/DR2_Aug(30k)')
 #print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
 #print(len(os.listdir('/home/youssef/Desktop/Training_Dataset(15k)/DR2_Aug')))
-transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization','/home/youssef/Desktop/Training_Dataset30k/DR1(30k)',len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization/images')))
+#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization','/home/youssef/Desktop/Training_Dataset30k/DR1(30k)',len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Asset_Randomization/images')))
 #check_percentage_histogram('/home/youssef/Desktop/Training_Dataset30k/NoDR_Aug',assets_needed)
 
 #delete('/home/youssef/Desktop/Training_Dataset30k/DR3',1)
