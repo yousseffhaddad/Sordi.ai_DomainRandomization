@@ -1,0 +1,191 @@
+[
+    {
+        "Id": 178723,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 778,
+        "Top": 532,
+        "Right": 948,
+        "Bottom": 626
+    },
+    {
+        "Id": 178725,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 1035,
+        "Top": 411,
+        "Right": 1089,
+        "Bottom": 438
+    },
+    {
+        "Id": 178730,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 621,
+        "Top": 496,
+        "Right": 737,
+        "Bottom": 573
+    },
+    {
+        "Id": 178731,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 624,
+        "Top": 401,
+        "Right": 733,
+        "Bottom": 526
+    },
+    {
+        "Id": 178732,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 657,
+        "Top": 417,
+        "Right": 726,
+        "Bottom": 445
+    },
+    {
+        "Id": 178736,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 738,
+        "Top": 495,
+        "Right": 854,
+        "Bottom": 571
+    },
+    {
+        "Id": 178737,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 742,
+        "Top": 400,
+        "Right": 861,
+        "Bottom": 524
+    },
+    {
+        "Id": 178738,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 704,
+        "Top": 465,
+        "Right": 795,
+        "Bottom": 524
+    },
+    {
+        "Id": 178739,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 704,
+        "Top": 384,
+        "Right": 811,
+        "Bottom": 487
+    },
+    {
+        "Id": 178740,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 601,
+        "Top": 467,
+        "Right": 708,
+        "Bottom": 525
+    },
+    {
+        "Id": 178741,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 604,
+        "Top": 385,
+        "Right": 704,
+        "Bottom": 488
+    },
+    {
+        "Id": 178742,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 644,
+        "Top": 428,
+        "Right": 718,
+        "Bottom": 461
+    },
+    {
+        "Id": 178744,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 565,
+        "Top": 427,
+        "Right": 621,
+        "Bottom": 470
+    },
+    {
+        "Id": 178746,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 589,
+        "Top": 410,
+        "Right": 661,
+        "Bottom": 447
+    },
+    {
+        "Id": 178750,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 143,
+        "Top": 400,
+        "Right": 224,
+        "Bottom": 432
+    },
+    {
+        "Id": 178751,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 108,
+        "Top": 407,
+        "Right": 206,
+        "Bottom": 441
+    },
+    {
+        "Id": 178752,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 19,
+        "Top": 419,
+        "Right": 105,
+        "Bottom": 451
+    },
+    {
+        "Id": 178753,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 107,
+        "Top": 420,
+        "Right": 182,
+        "Bottom": 464
+    },
+    {
+        "Id": 178765,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 785,
+        "Top": 420,
+        "Right": 954,
+        "Bottom": 572
+    },
+    {
+        "Id": 178766,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 640,
+        "Top": 640,
+        "Right": 1159,
+        "Bottom": 719
+    },
+    {
+        "Id": 178767,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 1075,
+        "Top": 634,
+        "Right": 1279,
+        "Bottom": 719
+    }
+]

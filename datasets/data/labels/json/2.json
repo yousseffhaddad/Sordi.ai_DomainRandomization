@@ -1,0 +1,200 @@
+[
+    {
+        "Id": 215895,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 691,
+        "Top": 458,
+        "Right": 754,
+        "Bottom": 492
+    },
+    {
+        "Id": 215896,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 587,
+        "Top": 535,
+        "Right": 700,
+        "Bottom": 596
+    },
+    {
+        "Id": 215897,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 802,
+        "Top": 547,
+        "Right": 845,
+        "Bottom": 588
+    },
+    {
+        "Id": 215898,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 684,
+        "Top": 577,
+        "Right": 784,
+        "Bottom": 656
+    },
+    {
+        "Id": 215899,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 697,
+        "Top": 611,
+        "Right": 834,
+        "Bottom": 709
+    },
+    {
+        "Id": 215903,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 601,
+        "Top": 438,
+        "Right": 660,
+        "Bottom": 475
+    },
+    {
+        "Id": 215912,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 596,
+        "Top": 657,
+        "Right": 820,
+        "Bottom": 719
+    },
+    {
+        "Id": 215913,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 665,
+        "Top": 437,
+        "Right": 724,
+        "Bottom": 474
+    },
+    {
+        "Id": 215917,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 591,
+        "Top": 424,
+        "Right": 649,
+        "Bottom": 451
+    },
+    {
+        "Id": 215921,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 572,
+        "Top": 402,
+        "Right": 615,
+        "Bottom": 428
+    },
+    {
+        "Id": 215941,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 278,
+        "Top": 385,
+        "Right": 335,
+        "Bottom": 406
+    },
+    {
+        "Id": 215942,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 269,
+        "Top": 389,
+        "Right": 328,
+        "Bottom": 412
+    },
+    {
+        "Id": 215944,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 279,
+        "Top": 398,
+        "Right": 321,
+        "Bottom": 425
+    },
+    {
+        "Id": 215945,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 23,
+        "Top": 475,
+        "Right": 131,
+        "Bottom": 520
+    },
+    {
+        "Id": 215946,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 23,
+        "Top": 488,
+        "Right": 107,
+        "Bottom": 535
+    },
+    {
+        "Id": 215967,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 590,
+        "Top": 454,
+        "Right": 712,
+        "Bottom": 558
+    },
+    {
+        "Id": 215968,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 713,
+        "Top": 452,
+        "Right": 843,
+        "Bottom": 555
+    },
+    {
+        "Id": 215969,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 690,
+        "Top": 482,
+        "Right": 804,
+        "Bottom": 609
+    },
+    {
+        "Id": 215970,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 704,
+        "Top": 505,
+        "Right": 843,
+        "Bottom": 658
+    },
+    {
+        "Id": 215971,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 752,
+        "Top": 606,
+        "Right": 1011,
+        "Bottom": 719
+    },
+    {
+        "Id": 215972,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 1004,
+        "Top": 587,
+        "Right": 1232,
+        "Bottom": 719
+    },
+    {
+        "Id": 216096,
+        "ObjectClassName": "pallet",
+        "ObjectClassId": 1100,
+        "Left": 151,
+        "Top": 447,
+        "Right": 232,
+        "Bottom": 460
+    }
+]

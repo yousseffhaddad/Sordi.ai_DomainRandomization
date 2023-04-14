@@ -1,0 +1,209 @@
+[
+    {
+        "Id": 270505,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 771,
+        "Top": 517,
+        "Right": 1003,
+        "Bottom": 719
+    },
+    {
+        "Id": 270518,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 719,
+        "Top": 577,
+        "Right": 874,
+        "Bottom": 666
+    },
+    {
+        "Id": 270519,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 721,
+        "Top": 448,
+        "Right": 872,
+        "Bottom": 606
+    },
+    {
+        "Id": 270520,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 819,
+        "Top": 527,
+        "Right": 952,
+        "Bottom": 570
+    },
+    {
+        "Id": 270521,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 823,
+        "Top": 429,
+        "Right": 948,
+        "Bottom": 558
+    },
+    {
+        "Id": 270522,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 697,
+        "Top": 615,
+        "Right": 875,
+        "Bottom": 719
+    },
+    {
+        "Id": 270523,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 703,
+        "Top": 476,
+        "Right": 869,
+        "Bottom": 676
+    },
+    {
+        "Id": 270524,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 871,
+        "Top": 615,
+        "Right": 1060,
+        "Bottom": 691
+    },
+    {
+        "Id": 270525,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 877,
+        "Top": 476,
+        "Right": 1070,
+        "Bottom": 675
+    },
+    {
+        "Id": 270528,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 225,
+        "Top": 442,
+        "Right": 312,
+        "Bottom": 481
+    },
+    {
+        "Id": 270530,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 251,
+        "Top": 431,
+        "Right": 330,
+        "Bottom": 466
+    },
+    {
+        "Id": 270537,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 990,
+        "Top": 516,
+        "Right": 1266,
+        "Bottom": 719
+    },
+    {
+        "Id": 270538,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 773,
+        "Top": 592,
+        "Right": 1119,
+        "Bottom": 719
+    },
+    {
+        "Id": 270539,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 1074,
+        "Top": 590,
+        "Right": 1279,
+        "Bottom": 719
+    },
+    {
+        "Id": 270541,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 860,
+        "Top": 568,
+        "Right": 1034,
+        "Bottom": 656
+    },
+    {
+        "Id": 270542,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 864,
+        "Top": 447,
+        "Right": 1029,
+        "Bottom": 602
+    },
+    {
+        "Id": 270543,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 291,
+        "Top": 513,
+        "Right": 448,
+        "Bottom": 577
+    },
+    {
+        "Id": 270544,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 295,
+        "Top": 421,
+        "Right": 445,
+        "Bottom": 534
+    },
+    {
+        "Id": 270554,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 330,
+        "Top": 408,
+        "Right": 378,
+        "Bottom": 436
+    },
+    {
+        "Id": 270564,
+        "ObjectClassName": "dolly",
+        "ObjectClassId": 1110,
+        "Left": 295,
+        "Top": 420,
+        "Right": 354,
+        "Bottom": 452
+    },
+    {
+        "Id": 270569,
+        "ObjectClassName": "stillage",
+        "ObjectClassId": 1004,
+        "Left": 104,
+        "Top": 437,
+        "Right": 210,
+        "Bottom": 531
+    },
+    {
+        "Id": 270597,
+        "ObjectClassName": "pallet",
+        "ObjectClassId": 1100,
+        "Left": 490,
+        "Top": 490,
+        "Right": 593,
+        "Bottom": 510
+    },
+    {
+        "Id": 270614,
+        "ObjectClassName": "jack",
+        "ObjectClassId": 1120,
+        "Left": 13,
+        "Top": 430,
+        "Right": 104,
+        "Bottom": 508
+    }
+]
