@@ -41,7 +41,7 @@ def check_percentage_histogram (files_directory,assets):
 
 def check_percentage(files_directory,selected_items,assets):
 
-    asset_percentage_dic={"klt_box": 0, "stillage": 0, "fire_extinguisher": 0 , "pallet": 0 , "jack": 0  , "dolly": 0  }
+    asset_percentage_dic={ "stillage": 0,"dolly": 0 ,"str":0 }
     for asset in assets:
 
         asset_count = 0
@@ -63,13 +63,13 @@ def check_percentage(files_directory,selected_items,assets):
 
 def transfer_data (source_directory,destination_directory,nb_of_images):
 
-    data = json.load(open(source_directory + '/objectclasses.json'))
+    #data = json.load(open(source_directory + '/objectclasses.json'))
     assets_needed = ["klt_box", "stillage", "fire_extinguisher", "pallet", "jack", "dolly"]
     if nb_of_images <= len(os.listdir(source_directory + '/labels/json/')) :
 
-        open(destination_directory + '/objectclasses.json', "w").write(
-            json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '))
-        )
+        #open(destination_directory + '/objectclasses.json', "w").write(
+          #  json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '))
+        #)
 
         labels = os.listdir(source_directory + '/labels/json/')
         i=len(os.listdir(destination_directory + '/labels/json/')) +1
@@ -83,7 +83,7 @@ def transfer_data (source_directory,destination_directory,nb_of_images):
             if ct>=nb_of_images:
                 break
             obj = json.load(open(source_directory + '/labels/json/' + item))
-            if ct%10==0 :
+            if ct%1000==0 :
                 asset=check_percentage(source_directory,selected_items,assets_needed)
                 print(asset)
             for j in range (len(obj)):
@@ -166,7 +166,7 @@ def delete (files_directory : str,nb):
   for filename in os.listdir(files_directory + '/labels/json/'):
     data = json.load(open(files_directory + '/labels/json/' + filename))
     for i in range (len(data)):
-        if  data[i]['ObjectClassName']=='stillage':
+        if  data[i]['ObjectClassName']=='dolly':
           label_corresponding_image = filename.split('.')[-2] + ".jpg"
           os.remove(files_directory + '/labels/json/' + filename)
           os.remove(files_directory + '/images/' + label_corresponding_image)
@@ -186,37 +186,38 @@ def drawBox(boxes,image):
 
 #Calling functions
 
-'''image = cv2.imread('/home/youssef/Desktop/Evaluation_Dataset/Eval6/images/2.jpg')
-image_label = json.load(open('/home/youssef/Desktop/Evaluation_Dataset/Eval6/labels/json/2.json'))
-origLeft = int(image_label[1]["Left"])
-origTop = int(image_label[1]["Top"])
-origRight = int(image_label[1]["Right"])
-origBottom = int(image_label[1]["Bottom"])
+'''image = cv2.imread('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg/images/2.jpg')
+image_label = json.load(open('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg/labels/json/2.json'))
+origLeft = int(image_label[7]["Left"])
+origTop = int(image_label[7]["Top"])
+origRight = int(image_label[7]["Right"])
+origBottom = int(image_label[7]["Bottom"])
 #print(origBottom,origTop,origRight,origLeft)
 
 drawBox([origLeft, origTop, origRight, origBottom],image)'''
 
-assets_needed=["klt_box","stillage","fire_extinguisher","pallet","jack","dolly"]
+#assets_needed=["klt_box","stillage","fire_extinguisher","pallet","jack","dolly"]
+assets_needed=["stillage","dolly","str"]
 #print(check_percentage('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi_POC',assets_needed))
-#pp.remove_duplicates_using_hash('/home/youssef/Desktop/Sordi.ai_Dataset/Scene7_Texture_Light')
-'''pp.change_subassets_names('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')
-pp.delete_uneeded_assets('/home/youssef/Desktop/Sordi.ai_Dataset/SORDI_2021_POC')'''
-#pp.delete_empty_files('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
-#pp.adjust_object_class_name('/home/youssef/Desktop/Evaluation_Dataset/Eval5')
-#pp.renaming_Object_Class_Id('/home/youssef/Desktop/Evaluation_Dataset/Eval5')
+#pp.remove_duplicates_using_hash('/home/youssef/Desktop/Sordi.ai_Dataset/regensburg_plant_720p')
+#pp.change_subassets_names('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')
+#pp.delete_uneeded_assets('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')
+#pp.delete_empty_files('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')
+#pp.adjust_object_class_name('/home/youssef/Desktop/Training_Dataset30k/Regensburg')
+#pp.renaming_Object_Class_Id('/home/youssef/Desktop/Evaluation_Dataset/Eval6new1')
 
-#pp.add_object_class_id('/home/youssef/Desktop/Training_Dataset30k/NoDR')
+#pp.add_object_class_id('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')
 
 
 #pp.delete_json('/home/youssef/Desktop/Training_Dataset/No-DR')
-#pp.delete_images('/home/youssef/Desktop/Evaluation_Dataset/Eval6.1')
+#pp.delete_images('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
 #da.augment_data('/home/youssef/Desktop/Training_Dataset30k/DR2(30k)','/home/youssef/Desktop/Training_Dataset30k/DR2_Aug(30k)')
-#print(len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/regensburg_plant_720p/images')))
-#print(len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/regensburg_plant_720p/labels/json')))
-#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg','/home/youssef/Desktop/Evaluation_Dataset/Eval6',200)
-check_percentage_histogram('/home/youssef/Desktop/Evaluation_Dataset/Eval6',assets_needed)
+#print(len(os.listdir('/home/youssef/Desktop/Training_Dataset30k/Regensburg/images')))
+#print(len(os.listdir('/home/youssef/Desktop/Training_Dataset30k/Regensburg/labels/json')))
+#transfer_data('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi-Datasets/Sordi4/output3/resized6/Viewport','/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg',len(os.listdir('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi-Datasets/Sordi4/output3/resized6/Viewport/images/')))
+#check_percentage_histogram('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg',assets_needed)
 
-#delete('/home/youssef/Desktop/Training_Dataset30k/DR3',1)
+#delete('/home/youssef/Desktop/Training_Dataset30k/Regensburg',939)
 
 
 

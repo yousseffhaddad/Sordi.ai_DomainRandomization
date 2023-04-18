@@ -5,26 +5,30 @@ import matplotlib.pyplot as plt
 
 def checkAssets_bb(files_directory):
 
-    json_path = files_directory + "/labels/json/2.json"
-
-    with open(json_path,'r') as f:
-        json_file = json.load(f)
-    i=0
-   # min=100000
-    for json_data in json_file:
+    json_path = files_directory + "/labels/json/"
+    labels_list = os.listdir(json_path)
+    for file in labels_list:
+        with open(json_path +file,'r') as f:
+            json_file = json.load(f)
+        i=0
+       # min=100000
+        for json_data in json_file:
             width = abs(json_data['Left'] - json_data['Right'])
             height = abs(json_data['Top'] - json_data['Bottom'])
             threshold=width*height
-            print(i,json_data['ObjectClassName'],threshold)
+            print(file,i,json_data['ObjectClassName'],threshold)
             i=i+1
-    #print(min)
+
+        #print(min)
 
 def cleaning_bb(files_directory):
     json_path = files_directory + "/labels/json/"
     labels_list = os.listdir(json_path)
     print(labels_list)
-    assets_threshold = {"klt_box": 5000, "stillage": 9800, "fire_extinguisher": 216, "pallet": 66000, "jack": 1300,
-                     "dolly": 5800}
+    #for Eval 5
+    #assets_threshold = {"klt_box": 5000, "stillage": 9800, "fire_extinguisher": 700, "pallet": 66000, "jack": 20000, "dolly": 5800}
+    #for Eval6
+    assets_threshold = {"klt_box": 10000, "stillage": 9800, "fire_extinguisher": 8000, "pallet": 66000, "jack": 20000,"dolly": 5800}
     for label in labels_list:
         new_json = {}
         j = 0
@@ -82,5 +86,5 @@ def drawBox_allImages(files_directory):
 
 
 #cleaning_bb('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
-#checkAssets_bb('/home/youssef/Desktop/Evaluation_Dataset/Eval6')
-drawBox_allImages('/home/youssef/Desktop/Evaluation_Dataset/Eval5')
+#checkAssets_bb('datasets/data/')
+drawBox_allImages('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')

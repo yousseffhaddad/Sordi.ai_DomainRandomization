@@ -59,7 +59,7 @@ def delete_uneeded_assets (files_directory : str):
   # Load the JSON module and use it to load your JSON file.
   # I'm assuming that the JSON file contains a list of objects.
   print("deleting uneeded assets ...")
-  assets_needed=["klt_box","stillage","fire_extinguisher","pallet","jack","dolly"]
+  assets_needed=["stillage","str","dolly"]
   labels = os.listdir(files_directory + '/labels/json/')
   for label in labels :
       obj  = json.load(open(files_directory + '/labels/json/' + label))
@@ -142,7 +142,8 @@ def change_subassets_names (files_directory : str):
 def adjust_object_class_name (files_directory : str):
     print("adjusting object classes names")
     data = json.load(open(files_directory + '/objectclasses.json'))
-    assets_needed = {"klt_box": 1015, "stillage": 1004, "fire_extinguisher" : 5010, "pallet": 1100, "jack": 1120, "dolly": 1110}
+   # assets_needed = {"klt_box": 1015, "stillage": 1004, "fire_extinguisher" : 5010, "pallet": 1100, "jack": 1120, "dolly": 1110}
+    assets_needed = { "stillage": 1004, "dolly": 1110, "str":2050}
     new_json={}
     i=0
     for key , val  in assets_needed.items():
@@ -176,7 +177,8 @@ def renaming_Object_Class_Id(files_directory : str):
 
 def add_object_class_id (files_directory : str):
 
-    assets_needed = {"klt_box": 1015, "stillage": 1004, "fire_extinguisher": 5010, "pallet": 1100, "jack": 1120,"dolly": 1110}
+    #assets_needed = {"klt_box": 1015, "stillage": 1004, "fire_extinguisher": 5010, "pallet": 1100, "jack": 1120,"dolly": 1110}
+    assets_needed = {"stillage": 1004, "dolly": 1110, "str": 2050}
     for filename in os.listdir(files_directory + '/labels/json/'):
         data = json.load(open(files_directory + '/labels/json/' + filename))
         for i in range(len(data)):
