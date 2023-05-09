@@ -86,5 +86,5 @@ def drawBox_allImages(files_directory):
 
 
 #cleaning_bb('/home/youssef/Desktop/Sordi.ai_Dataset/Spartunburg')
-#checkAssets_bb('datasets/data/')
-drawBox_allImages('/home/youssef/Desktop/Training_Dataset30k/FollowPath_Regensburg')
+#checkAssets_bb('/home/youssef/Desktop/Evaluation_Dataset/Exp3_Evaluation')
+#drawBox_allImages('/home/youssef/Desktop/Sordi.ai_Dataset/youssef/R_Eval_200')
