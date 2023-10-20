@@ -12,16 +12,16 @@ def npy_to_json(files_directory):
     np.load = lambda *a, **k: np_load_old(*a, allow_pickle=True, **k)
 
     for dir in directories:
-        current_dir=files_directory+ '/'+  dir +'/Viewport/rgb'
-        new_dir_name='images'
-        new_dir = os.path.join(os.path.dirname(current_dir), new_dir_name)
-        os.rename(current_dir, new_dir)
-        output = files_directory +'/'+ dir +'/Viewport/labels/json/'
+        #current_dir=files_directory+ '/'+  dir +'/Viewport/rgb'
+        #new_dir_name='images'
+        #new_dir = os.path.join(os.path.dirname(current_dir), new_dir_name)
+        #os.rename(current_dir, new_dir)
+        output = files_directory +'/'+ dir +'/labels/json/'
         create_folder(output)
-        npys=os.listdir(files_directory+ '/'+  dir +'/Viewport/bbox_2d_tight/')
+        npys=os.listdir(files_directory+ '/'+  dir +'/bbox_2d_tight/')
 
         for npy in npys :
-            npy_array = np.load(files_directory +'/'+ dir +'/Viewport/bbox_2d_tight/' + npy)
+            npy_array = np.load(files_directory +'/'+ dir +'/bbox_2d_tight/' + npy)
             jsonfile = npy.split('.')[-2] + ".json"
             #print(npy_array.tolist())
 
@@ -40,13 +40,13 @@ def npy_to_json(files_directory):
                 #print(labels)
 
             # Save the dictionary to a JSON file
-            with open(files_directory +'/'+ dir +'/Viewport/labels/json/'+ jsonfile, 'w') as json_file:
+            with open(files_directory +'/'+ dir +'/labels/json/'+ jsonfile, 'w') as json_file:
                 json.dump(labels, json_file)
 
-        shutil.rmtree(files_directory +'/'+ dir +'/Viewport/bbox_2d_tight/')
+        #shutil.rmtree(files_directory +'/'+ dir +'/Viewport/bbox_2d_tight/')
 
 def create_folder(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-#npy_to_json('/home/youssef/Desktop/Sordi.ai_Dataset/Sordi-Datasets/Sordi4/output3')
+npy_to_json('/home/youssef/Desktop/Sordi.ai_Dataset/FllwPath/Sordi4/output3/')

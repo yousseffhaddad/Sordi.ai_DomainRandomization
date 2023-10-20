@@ -1,7 +1,6 @@
 import os
 import json
 import shutil
-
 def txt_writer(files_directory):
 
     json_path = files_directory + "/labels/json/"
@@ -44,4 +43,37 @@ def create_folder(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-txt_writer('/home/youssef/Desktop/Training_Dataset30k/NoDR_Aug(30k)')
+'''image_path = '/media/youssef/9e108ea8-f054-471a-8046-77291aab9175/home/youssef/Documents/Training_Dataset_30k/DR2(30k)/images/1.jpg'
+image = cv2.imread(image_path)
+
+# Load the corresponding YOLO label file
+label_path = '/media/youssef/9e108ea8-f054-471a-8046-77291aab9175/home/youssef/Documents/Training_Dataset_30k/DR2(30k)/labels/yolo/1.txt'
+with open(label_path, 'r') as f:
+    lines = f.readlines()
+
+# Loop through each line in the label file
+for line in lines:
+    parts = line.strip().split()
+    class_id = int(parts[0])
+    x_center = float(parts[1])
+    y_center = float(parts[2])
+    width = float(parts[3])
+    height = float(parts[4])
+
+    # Convert YOLO format to image coordinates
+    image_height, image_width, _ = image.shape
+    x = int((x_center - width / 2) * image_width)
+    y = int((y_center - height / 2) * image_height)
+    w = int(width * image_width)
+    h = int(height * image_height)
+
+    # Draw the bounding box
+    color = (0, 255, 0)  # Green color for the box (BGR format)
+    thickness = 2       # Thickness of the box's lines
+    cv2.rectangle(image, (x, y), (x + w, y + h), color, thickness)
+
+# Display the result
+plt.figure(figsize=(10, 10))
+plt.axis('off')
+plt.imshow(image)
+plt.show()'''

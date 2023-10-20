@@ -60,7 +60,7 @@ def delete_uneeded_assets (files_directory : str):
   # I'm assuming that the JSON file contains a list of objects.
   print("deleting uneeded assets ...")
   #assets_needed = {"klt_box": 1015, "stillage": 1004, "fire_extinguisher": 5010, "pallet": 1100, "jack": 1120,"dolly": 1110}
-  assets_needed=["stillage","dolly"]
+  assets_needed=["dolly","pallet","fire_extinguisher","Klt_box"]
   labels = os.listdir(files_directory + '/labels/json/')
   for label in labels :
       obj  = json.load(open(files_directory + '/labels/json/' + label))
@@ -88,13 +88,19 @@ def delete_empty_files (files_directory : str):
   for filename in os.listdir(files_directory + '/labels/json/'):
     data = json.load(open(files_directory + '/labels/json/' + filename))
     if not data :
-      label_corresponding_image = filename.split('.')[-2] + ".png"
+      label_corresponding_image = filename.split('.')[-3] + ".jpg"
       os.remove(files_directory + '/labels/json/' + filename)
       if os.path.exists(files_directory + '/images/' + label_corresponding_image):
           os.remove(files_directory + '/images/' + label_corresponding_image)
       print(f"File {filename} has been deleted")
 
-
+def delete_images_one_label(files_directory :str):
+    for filename in os.listdir(files_directory + '/labels/json/'):
+        data = json.load(open(files_directory + '/labels/json/' + filename))
+        if len(data)==1:
+            label_corresponding_image = filename.split('.')[-3] + ".jpg"
+            os.remove(files_directory + '/labels/json/' + filename)
+            os.remove(files_directory + '/images/' + label_corresponding_image)
 
 def delete_images (files_directory : str):
   print("deleting images")
@@ -108,7 +114,7 @@ def delete_images (files_directory : str):
 
 
 def delete_json (files_directory : str):
-  print("deleting images")
+  print("deleting labels")
   for filename in os.listdir(files_directory + '/labels/json/'):
 
       label_corresponding_image = filename.split('.')[-2] + ".jpg"
@@ -120,21 +126,20 @@ def delete_json (files_directory : str):
 
 def change_subassets_names (files_directory : str):
   print("changing subassets names...")
-  sub_assets={"klt_box":["klt_box_empty","klt_box_full","l_klt_4147","l_klt_8210","l_klt_3147","l_klt_6147","l_klt_6410","box_klt"],
-                "stillage":["stillage_full","stillage_empty","stillage_close","stillage_open","stillage_front_310_6969","Meshcontainer"]
-           }
+  #sub_assets={"Klt_box":["klt_box_empty","klt_box_full","l_klt_4147","l_klt_8210","l_klt_3147","l_klt_6147","l_klt_6410","box_klt","klt_box"],
+             #   "stillage":["stillage_full","stillage_empty","stillage_close","stillage_open"]
+           #}
+  sub_assets={ "stillage":["stillage_full","stillage_empty","stillage_close","stillage_open"]}
+  #sub_assets={ "stillage":["Meshcontainer"],"dolly":["Dolly-Full"]}
 
   for filename in os.listdir(files_directory + '/labels/json/'):
     data = json.load(open(files_directory + '/labels/json/' + filename))
     for i in range(len(data)):
-        if data[i]["ObjectClassName"] in sub_assets['klt_box']:
-            data[i]["ObjectClassName"]='klt_box'
+        if data[i]["ObjectClassName"] in sub_assets['stillage']:
+            data[i]["ObjectClassName"]='stillage'
 
-        if data[i]["ObjectClassName"] =="Dolly":
-            data[i]["ObjectClassName"]='dolly'
-
-        elif data[i]["ObjectClassName"] in sub_assets['stillage']:
-            data[i]["ObjectClassName"] = 'stillage'
+        #if data[i]["ObjectClassName"] in sub_assets['dolly']:
+        #    data[i]["ObjectClassName"]='dolly'
 
     open(files_directory + '/labels/json/' + filename, "w").write(
         json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '))
@@ -183,8 +188,8 @@ def renaming_Object_Class_Id(files_directory : str):
 
 def add_object_class_id (files_directory : str):
 
-    assets_needed = {"klt_box": 0, "stillage": 1004, "fire_extinguisher": 5010, "pallet": 1100, "jack": 1120,"dolly": 1110}
-    assets_needed = {"stillage": 1004, "dolly": 1110}
+    assets_needed = {"dolly":1110,"pallet":1100,"fire_extinguisher":5010,"Klt_box":1015}
+    #assets_needed = {"stillage": 1004, "dolly": 1110}
     for filename in os.listdir(files_directory + '/labels/json/'):
         data = json.load(open(files_directory + '/labels/json/' + filename))
         for i in range(len(data)):
@@ -196,3 +201,27 @@ def add_object_class_id (files_directory : str):
         )
 
     print("done")
+
+def transferlabels (source,dest):
+    images=os.listdir(dest+"/images")
+    for img in images :
+        label=img.split('.')[-2]+".json"
+        if os.path.exists(source+'/labels/json/' + label):
+            data = json.load(open(source + '/labels/json/' + label))
+            open(dest + '/labels/json/' + label, "w").write(
+                json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '))
+            )
+
+def delete_images_not_exist(origdirectory,bbdirectory):
+    org_images=os.listdir(bbdirectory)
+    all_images=os.listdir(origdirectory+"/images/")
+    for img in all_images:
+        if img not in org_images:
+            os.remove(origdirectory + '/images/' + img)
+            label = img.split('.')[-2] + ".json"
+            os.remove(origdirectory + '/labels/json/' +label)
+
+
+
+
+
